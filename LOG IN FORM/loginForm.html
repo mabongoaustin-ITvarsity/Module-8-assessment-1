@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    </head>
+
+    <body style="background-color: skyblue" >
+        <h1>***James Bond Quiz Hack***</h1>
+        <p>Welcome. Please log in</p>
+        
+        <h2>Username clue *: What is James surname?</h2>
+        
+        <h2>Password clue *: What is James agent number which most agents call him?</h2>
+        
+        
+        
+        
+        <form>
+            
+        <label for="usernameInput">Username:</label><input type="text" id="usernameInput"/><br/>
+        <label for="passwordInput">Password:</label><input type="password" id="passwordInput"/>
+        <p id="message"></p>
+        <br/><br/>
+        <a href="#" onclick="verifyUser()"><input type="submit" value="Log in"/></a>
+    
+        </form>
+        
+        <script>
+            
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+                
+                checkUserCreds(username, password);
+            }
+            
+            function checkUserCreds(username, password){
+               var systemUsername = "Bond";
+               var systemPassword = "007";
+                
+                if(username == systemUsername && password == systemPassword){
+                    document.getElementById("message").innerHTML = "Correct. Logging you in...";
+                } else{
+                     document.getElementById("message").innerHTML =  "Username or Password are incorrect";
+                    
+                }
+                
+            }
+        </script>
+    <body/>
+<html/>
